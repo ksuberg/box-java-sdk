@@ -18,7 +18,7 @@ repositories {
 sourceSets {
     example {
         java {
-            compileClasspath += main.output
+            compileClasspath += main.compileClasspath + main.output
             runtimeClasspath += main.runtimeClasspath
         }
     }
@@ -34,7 +34,7 @@ dependencies {
     testCompile 'com.github.tomakehurst:wiremock:1.52'
     testCompile 'org.mockito:mockito-core:1.9.5'
     testCompile 'org.slf4j:slf4j-api:1.7.7'
-    testCompile 'org.slf4j:slf4j-nop:1.7.7'
+    compile 'org.slf4j:slf4j-simple:1.7.7'
     exampleCompile 'com.eclipsesource.minimal-json:minimal-json:0.9.1'
 }
 
@@ -80,6 +80,11 @@ task runAccessAsAppUser(type: JavaExec, dependsOn: 'exampleClasses') {
 task runBatchExample(type: JavaExec, dependsOn: 'exampleClasses') {
     classpath = sourceSets.example.runtimeClasspath
     main = 'com.box.sdk.example.BatchRequestExample'
+}
+
+task runScaleTestForTos(type: JavaExec, dependsOn: 'exampleClasses') {
+    classpath = sourceSets.example.runtimeClasspath
+    main = 'com.box.sdk.example.ScaleTestForTos'
 }
 
 task javadocJar(type: Jar) {

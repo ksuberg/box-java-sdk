@@ -1,14 +1,16 @@
 package com.box.sdk;
 
+import com.eclipsesource.json.JsonArray;
+import com.eclipsesource.json.JsonObject;
+import com.eclipsesource.json.JsonValue;
+
 import java.net.URL;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
-import com.eclipsesource.json.JsonArray;
-import com.eclipsesource.json.JsonObject;
-import com.eclipsesource.json.JsonValue;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Represents a collaboration between a user and another user or group. Collaborations are Box's equivalent of access
@@ -72,6 +74,37 @@ public class BoxCollaboration extends BoxResource {
         }
 
         return collaborations;
+    }
+
+    /**
+     *
+     * @param api
+     * @param folder
+     * @param email
+     * @param role
+     */
+    public static void sendCollaborations(BoxAPIConnection api, BoxFolder folder, String email, BoxCollaboration.Role role) {
+        System.out.println("Send Collaborations...");
+        int numberSent = 0;
+        int numberAlreadyCollaborated = 0;
+        for (BoxItem.Info childFileInfo : folder) {
+            try {
+                BoxFolder childFile = (BoxFolder) childFileInfo.getResource();
+                childFile.collaborate(email, Role.VIEWER, false, false);
+                ++numberSent;
+            } catch (BoxAPIException e) {
+                if (e.getResponseCode() == 400) {
+                    ++numberAlreadyCollaborated;
+                } else {
+                    throw e;
+                }
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+        }
+        System.out.println("Number collaborations sent "+ numberSent + ", number already collaborated on " + numberAlreadyCollaborated);
     }
 
     /**

@@ -202,6 +202,11 @@ public class BoxUser extends BoxCollaborator {
         return getUsersInfoForType(api, filterTerm, "external", null, fields);
     }
 
+    public static Iterable<BoxUser.Info> getExternalUserById(final BoxAPIConnection api, final String externalAppUserId, final String filterTerm,
+          final String... fields) {
+        return getUsersInfoForType(api, filterTerm, "external", externalAppUserId, fields);
+    }
+
     /**
      * Gets any managed users that match the filter term as well as any external users that
      * match the filter term. For managed users it matches any users names or emails that

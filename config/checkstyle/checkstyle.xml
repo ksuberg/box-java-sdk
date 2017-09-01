@@ -109,16 +109,16 @@
 
         <!-- Checks for imports                              -->
         <!-- See http://checkstyle.sf.net/config_import.html -->
-        <module name="AvoidStarImport"/>
-        <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
-        <module name="RedundantImport"/>
-        <module name="UnusedImports"/>
-        <module name="ImportOrder">
-            <property name="groups" value="/^javax?\./,javafx,org,com"/>
-            <property name="ordered" value="true"/>
-            <property name="separated" value="true"/>
-            <property name="option" value="above"/>
-        </module>
+        <!--<module name="AvoidStarImport"/>-->
+        <!--<module name="IllegalImport"/> &lt;!&ndash; defaults to sun.* packages &ndash;&gt;-->
+        <!--<module name="RedundantImport"/>-->
+        <!--<module name="UnusedImports"/>-->
+        <!--<module name="ImportOrder">-->
+            <!--<property name="groups" value="/^javax?\./,javafx,org,com"/>-->
+            <!--<property name="ordered" value="true"/>-->
+            <!--<property name="separated" value="true"/>-->
+            <!--<property name="option" value="above"/>-->
+        <!--</module>-->
 
 
         <!-- Checks for Size Violations.                    -->
@@ -132,52 +132,52 @@
 
         <!-- Checks for whitespace                               -->
         <!-- See http://checkstyle.sf.net/config_whitespace.html -->
-        <module name="EmptyForIteratorPad"/>
-        <module name="GenericWhitespace"/>
-        <module name="MethodParamPad"/>
-        <module name="NoWhitespaceAfter"/>
-        <module name="NoWhitespaceBefore"/>
-        <module name="OperatorWrap"/>
-        <module name="ParenPad"/>
-        <module name="TypecastParenPad"/>
-        <module name="WhitespaceAfter"/>
-        <module name="WhitespaceAround"/>
+        <!--<module name="EmptyForIteratorPad"/>-->
+        <!--<module name="GenericWhitespace"/>-->
+        <!--<module name="MethodParamPad"/>-->
+        <!--<module name="NoWhitespaceAfter"/>-->
+        <!--<module name="NoWhitespaceBefore"/>-->
+        <!--<module name="OperatorWrap"/>-->
+        <!--<module name="ParenPad"/>-->
+        <!--<module name="TypecastParenPad"/>-->
+        <!--<module name="WhitespaceAfter"/>-->
+        <!--<module name="WhitespaceAround"/>-->
 
 
         <!-- Modifier Checks                                    -->
         <!-- See http://checkstyle.sf.net/config_modifiers.html -->
-        <module name="ModifierOrder"/>
-        <module name="RedundantModifier"/>
+        <!--<module name="ModifierOrder"/>-->
+        <!--<module name="RedundantModifier"/>-->
 
 
         <!-- Checks for blocks. You know, those {}'s         -->
         <!-- See http://checkstyle.sf.net/config_blocks.html -->
-        <module name="AvoidNestedBlocks"/>
-        <module name="EmptyBlock">
-            <property name="tokens" value="LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_IF, LITERAL_FOR, LITERAL_TRY, LITERAL_WHILE, INSTANCE_INIT, STATIC_INIT"/>
-        </module>
-        <module name="LeftCurly"/>
-        <module name="NeedBraces"/>
-        <module name="RightCurly"/>
+        <!--<module name="AvoidNestedBlocks"/>-->
+        <!--<module name="EmptyBlock">-->
+            <!--<property name="tokens" value="LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_IF, LITERAL_FOR, LITERAL_TRY, LITERAL_WHILE, INSTANCE_INIT, STATIC_INIT"/>-->
+        <!--</module>-->
+        <!--<module name="LeftCurly"/>-->
+        <!--<module name="NeedBraces"/>-->
+        <!--<module name="RightCurly"/>-->
 
 
         <!-- Checks for common coding problems               -->
         <!-- See http://checkstyle.sf.net/config_coding.html -->
-        <module name="EmptyStatement"/>
-        <module name="EqualsHashCode"/>
-        <module name="IllegalInstantiation"/>
-        <module name="InnerAssignment"/>
-        <module name="MissingSwitchDefault"/>
-        <!-- module name="RedundantThrows"   RedundantThrows was removed with version 6.2  -->
-        <module name="SimplifyBooleanExpression"/>
-        <module name="SimplifyBooleanReturn"/>
+        <!--<module name="EmptyStatement"/>-->
+        <!--<module name="EqualsHashCode"/>-->
+        <!--<module name="IllegalInstantiation"/>-->
+        <!--<module name="InnerAssignment"/>-->
+        <!--<module name="MissingSwitchDefault"/>-->
+        <!--&lt;!&ndash; module name="RedundantThrows"   RedundantThrows was removed with version 6.2  &ndash;&gt;-->
+        <!--<module name="SimplifyBooleanExpression"/>-->
+        <!--<module name="SimplifyBooleanReturn"/>-->
 
         <!-- Checks for class design                         -->
         <!-- See http://checkstyle.sf.net/config_design.html -->
-        <module name="FinalClass"/>
-        <module name="HideUtilityClassConstructor"/>
-        <module name="InterfaceIsType"/>
-        <module name="VisibilityModifier"/>
+        <!--<module name="FinalClass"/>-->
+        <!--<module name="HideUtilityClassConstructor"/>-->
+        <!--<module name="InterfaceIsType"/>-->
+        <!--<module name="VisibilityModifier"/>-->
 
 
         <!-- Miscellaneous other checks.                   -->

@@ -1,12 +1,12 @@
 {
   "boxAppSettings": {
-    "clientID": "",
-    "clientSecret": "",
+    "clientID": "ypqekfo8ugc23iqh7di4ufhxbmp2iuv4",
+    "clientSecret": "c4kIbryQ1OhrmzeFFam0f6yz1jkGlpHB",
     "appAuth": {
-      "publicKeyID": "",
-      "privateKey": "",
-      "passphrase": ""
+      "publicKeyID": "rbsygv2s",
+      "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\nMIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQI3XgtQYRtxPUCAggA\nMBQGCCqGSIb3DQMHBAhqZpH8Fe2pvASCBMhe05Fx5E44aqfttcD/AzSkmgg5Rocn\ng6GVu79r/veNJCvPravUz1NLBeuqySFCIASkQLki+/E9yl1eGM95DvPDc5Sa+RCa\nYApz0H6bE9YTB3+wxAAe05E7HISC3pDA1eu9B8coAGJkMNGWZfp4WrOxA8Wq9tje\nZsc2VCOrIg8Khbr4536QZgoc3QpJliSyup/VBXE8+NpuNy3Mqb00GuFekRkegduK\nZL74YK4ZnvM3uxHa7YvFWB0i/LYz7BVb8lYhgT+5S4gll2G/6oSiwcroPjAUVvQu\ngVXumSsDTlUwaRm9wzJPNrKq7vICpknx1SqQYA0Bron71pd+LXQrvdjPFHY05nv+\nzH/UQLPBULY4tLoD6ORdjdT9RE+h/AXO4xl+c8I/TOo8o5WHPMEQmdkv0mkO82qt\nZhIvBUZAo0kRc/pFoUsbaJwMNhRPJCixdri2gRjYvreQUhuHmH/n7t5edK8ukGfQ\nodTL86dgho0FOzkj8pLG3KhYtRwA/anlUqvHkd952WSMZ1L8Xt3F7QAlIRJJPQrT\nbdMek0OJhVWHeJ0YDqNOlOApZ/jwXVLndrtvvHuWbTVjrBLMaRw5jfG2KnAaiAX0\nubtc82ji/mPpVzix+kn3s9rndjfirZN/fxH91ZkyvenPCToJzSfmwncMUoUb2S3v\nWYKElxwjn4J2SePYs15AGyAwuChPVMFgqMCvGgF9qg0sz8DA22hPaGWseZZls5KX\na9GFXwm4CNCzawu9oO1xwDYy+SgXBdXKrC2pciyzB6ZhKxBt+bv2wkFqPRuNJ6lS\nCGbJnzMZSjv7I+dl2FYIQ4jgImzU67ldF26Vxh1V7yg4vzbIZlIiPnL/h29NfrMo\n7JF3iq0VW5huB/SmzpSBRKbaMmxSPdjd0zJaO9RUyMG5xo82rp78A4dsWy1gRvW1\nkn6SeikZzPry2b5mi6ILT885AH2cMoagSdgE2cyvPjmFK2qT3x7veIVWHxD5nlEo\n/KCQt+nVaULG7F3GAwg6cwvRIIhy6IBoSa7mgic8KmTZyZVOWuAPcvfltcw24wap\nHmumtjhDcgETl4IBEkn/JuRsoovs5Kmf0dHqGtIqC+sMFdLN01I3q+HMYKOkZ+21\n3eFLJ2ye4lMk08VMaLvTwDOc2imvFpoEPu869MFMA2w2rXWeqD+yPL/PZaMpdZky\nCp2gXtCSoG30n9dSx+G6yJt10o8V5ai0A5tiR2Mm4S/LUeOUCvPeeqK91gqmmpf4\nta9s4t/vsG3vQ4cZ8EVWk0vP7mpqkd8Vm2Q6la2sfB8J1paEbnq6ttvtWz2hbFVG\nJuFMRI9CJvXhLradQoCdK90QAetGxMQ/N0kBDwEDi6nsK4jVFCblHIb9E9kaFGXN\n2l/l3Rc2/pPQ9G29wBh5idVx4ebQEP/7vdjW7i0MpcDwV4ITbD9wVlX4sjnv1j2r\nPEQAQfRpxEEpxVnMymfVVjOzBXAb63SDZnLl1TwjdmWoM+2tdEYUOYdc6TDSdUb+\nhN0qcjkfh3RdTM7q4/Gmai/+TMxDJGr9rs5RJkJrcvylHAQJlN9GaYRa0D8pcGpA\nYcnj4OLjO5W9hiE/7xZYA1iSAbeMGbFyoZAXghmQWvpaU2Gsr7xNsNp3POiNR2qg\nUrk=\n-----END ENCRYPTED PRIVATE KEY-----\n",
+      "passphrase": "bf9a71f68bddd1a0b15782a86fe5fbe3"
     }
   },
-  "enterpriseID": ""
+  "enterpriseID": "12320204"
 }

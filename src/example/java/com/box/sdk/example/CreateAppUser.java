@@ -1,23 +1,26 @@
 package com.box.sdk.example;
 
+import com.box.sdk.BoxAPIConnection;
+import com.box.sdk.BoxCollaboration;
+import com.box.sdk.BoxConfig;
+import com.box.sdk.BoxFolder;
+import com.box.sdk.BoxUser;
+import com.box.sdk.CreateUserParams;
+import com.box.sdk.IAccessTokenCache;
+import com.box.sdk.InMemoryLRUAccessTokenCache;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.box.sdk.BoxConfig;
-import com.box.sdk.BoxDeveloperEditionAPIConnection;
-import com.box.sdk.BoxUser;
-import com.box.sdk.CreateUserParams;
-import com.box.sdk.IAccessTokenCache;
-import com.box.sdk.InMemoryLRUAccessTokenCache;
-
 
 public final class CreateAppUser {
+    private static final String DEVELOPER_TOKEN = "8M8dXf2aHvOfqIF4xnKvNcVcvBzKL63V";
 
-    private static final String APP_USER_NAME = "";
-    private static final String EXTERNAL_APP_USER_ID = "";
+    private static final String APP_USER_NAME = "Test live app";
+    private static final String EXTERNAL_APP_USER_ID = "123";
     private static final int MAX_CACHE_ENTRIES = 100;
 
     private CreateAppUser() { }
@@ -35,8 +38,10 @@ public final class CreateAppUser {
         Reader reader = new FileReader("src/example/config/config.json");
         BoxConfig boxConfig = BoxConfig.readFrom(reader);
 
-        BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(
-                boxConfig, accessTokenCache);
+//        BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(
+//                boxConfig, accessTokenCache);
+        BoxAPIConnection api = new BoxAPIConnection(DEVELOPER_TOKEN);
+
 
         CreateUserParams params = new CreateUserParams();
         params.setSpaceAmount(1073741824); //1 GB
@@ -44,6 +49,12 @@ public final class CreateAppUser {
         //for which the associated app user is being created.
         params.setExternalAppUserId(EXTERNAL_APP_USER_ID);
         BoxUser.Info user = BoxUser.createAppUser(api, APP_USER_NAME, params);
+
+        BoxFolder rootFolder = BoxFolder.getRootFolder(api);
+        BoxCollaboration.getPendingCollaborations(api);
+        BoxCollaboration.sendCollaborations(api, rootFolder, APP_USER_NAME, BoxCollaboration.Role.VIEWER);
+//        rootFolder.collaborate(user.getResource(), BoxCollaboration.Role.VIEWER, true, true);
+
 
         System.out.format("User created with name %s and id %s\n\n", APP_USER_NAME, user.getID());
     }

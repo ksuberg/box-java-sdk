@@ -9,7 +9,7 @@ import com.box.sdk.BoxItem;
 import com.box.sdk.BoxUser;
 
 public final class Main {
-    private static final String DEVELOPER_TOKEN = "";
+    private static final String DEVELOPER_TOKEN = "8M8dXf2aHvOfqIF4xnKvNcVcvBzKL63V";
     private static final int MAX_DEPTH = 1;
 
     private Main() { }
